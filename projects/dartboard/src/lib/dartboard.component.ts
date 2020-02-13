@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
-import { IGeocodeResult, ISearchResult } from 'dartboard/public-api';
+import { IGeocodeResult, ISearchResult } from './dartboard';
 import { Observable, of } from 'rxjs';
 
 import { Address } from './dartboard';

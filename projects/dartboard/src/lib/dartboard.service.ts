@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IAddress, IGeocodeResult, ISearchResult, IWebApiResponse } from 'dartboard/public-api';
+import { IAddress, IGeocodeResult, ISearchResult, IWebApiResponse } from './dartboard';
 import * as querystring from 'querystring';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, mergeMap, pluck, timeout } from 'rxjs/operators';
