@@ -31,7 +31,7 @@ export class DartboardComponent {
   onSubmit(): void {
     const props: any = {
       apiKey: this.apiKey,
-      wkid: this.wkid
+      spatialReference: this.wkid
     };
 
     this.webApiService.find(this.model, props).subscribe({
