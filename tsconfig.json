@@ -24,6 +24,12 @@
       ],
       "dartboard/*": [
         "dist/dartboard/*"
+      ],
+      "layer-selector": [
+        "dist/layer-selector"
+      ],
+      "layer-selector/*": [
+        "dist/layer-selector/*"
       ]
     }
   },

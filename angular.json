@@ -159,6 +159,41 @@
           }
         }
       }
+    },
+    "layer-selector": {
+      "projectType": "library",
+      "root": "projects/layer-selector",
+      "sourceRoot": "projects/layer-selector/src",
+      "prefix": "agrc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/layer-selector/tsconfig.lib.json",
+            "project": "projects/layer-selector/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/layer-selector/src/test.ts",
+            "tsConfig": "projects/layer-selector/tsconfig.spec.json",
+            "karmaConfig": "projects/layer-selector/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/layer-selector/tsconfig.lib.json",
+              "projects/layer-selector/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ng-kitchen-sink"
 }
