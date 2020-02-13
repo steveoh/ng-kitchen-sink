@@ -20,7 +20,7 @@ export interface IGeocodeResult {
 }
 
 export interface ISearchResult {
-  geometry: object;
+  geometry: any;
   attributes: {};
 }
 
