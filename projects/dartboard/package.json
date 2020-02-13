@@ -1,8 +1,20 @@
 {
-  "name": "dartboard",
-  "version": "0.0.1",
+  "name": "@agrc/dartboard-ng",
+  "version": "1.0.0-alpha.1",
+  "description": "The AGRC geocoding widget written for Angular",
+  "author": {
+    "name": "Steve Gourley",
+    "email": "sgourley@utah.gov"
+  },
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "geocoding",
+    "angular",
+    "directive"
+  ],
   "peerDependencies": {
-    "@angular/common": "^8.2.14",
-    "@angular/core": "^8.2.14"
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0"
   }
 }

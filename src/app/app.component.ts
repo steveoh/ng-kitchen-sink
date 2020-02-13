@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'agrc-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.styl']
 })
 export class AppComponent {
-  title = 'ng-kitchen-sink';
+  findResult: string;
+  apiKey = 'AGRC-16E793E2220676';
+
+  onFind($event: Observable<any>): void {
+    this.findResult = '';
+    $event.subscribe({
+      next: (result: string) =>
+        (this.findResult = JSON.stringify(result, null, 2)),
+      error: (error: string) => (this.findResult = error)
+    });
+  }
 }

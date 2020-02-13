@@ -1,0 +1,44 @@
+<form #dartboardForm="ngForm" (ngSubmit)="onSubmit()" class="dartboard__form">
+  <div *ngIf="showStreet" class="form-group">
+    <label class="control-label dartboard__label" for="address">Address</label>
+    <input
+      [(ngModel)]="model.address"
+      #address="ngModel"
+      type="text"
+      class="form-control"
+      id="address"
+      name="address"
+      autocomplete="off"
+      [required]="requireStreet ? '' : null"
+    />
+    <span class="help-block dartboard__help-block" [class.hidden]="address.valid || address.pristine"
+      >Required!</span
+    >
+  </div>
+  <div class="form-group">
+    <label class="control-label dartboard__label" for="zone">Zip or City</label>
+    <input
+      [(ngModel)]="model.zone"
+      #zone="ngModel"
+      type="text"
+      class="form-control"
+      id="zone"
+      name="zone"
+      autocomplete="off"
+      required
+    />
+    <span class="help-block dartboard__help-block" [class.hidden]="zone.valid || zone.pristine"
+      >Required!</span
+    >
+  </div>
+  <div class="form-group" style="display: flex; justify-content: space-between;">
+    <button
+      type="submit"
+      class="btn btn-default dartboard__find-button"
+      [disabled]="!dartboardForm.form.valid"
+    >
+      Find
+    </button>
+    <span class="help-block dartboard__error-message" *ngIf="errorMessage">{{ errorMessage }}</span>
+  </div>
+</form>
