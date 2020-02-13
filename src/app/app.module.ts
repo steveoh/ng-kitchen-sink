@@ -1,8 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { DartboardModule } from 'projects/dartboard/src/public-api';
+import { LayerSelectorModule } from 'projects/layer-selector/src/public-api';
 
 import { AppComponent } from './app.component';
-import { DartboardModule } from 'projects/dartboard/src/public-api';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { DartboardModule } from 'projects/dartboard/src/public-api';
   ],
   imports: [
     BrowserModule,
-    DartboardModule
+    DartboardModule,
+    LayerSelectorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
