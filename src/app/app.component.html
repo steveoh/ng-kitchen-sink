@@ -10,5 +10,10 @@
 
 <h3>Layer Selector</h3>
 <div class="component">
-  <agrc-layer-selector></agrc-layer-selector>
+  <agrc-layer-selector
+    [baseLayers]="['Lite', 'Terrain', 'Topo', 'Color IR', 'Hybrid']"
+    [view]="mapView"
+    [quadWord]="quadWord"
+  ></agrc-layer-selector>
+  <div #mapViewNode></div>
 </div>
