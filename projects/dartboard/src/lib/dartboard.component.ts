@@ -29,6 +29,8 @@ export class DartboardComponent {
   constructor(private webApiService: DartboardService) {}
 
   onSubmit(): void {
+    this.errorMessage = '';
+
     const props: any = {
       apiKey: this.apiKey,
       spatialReference: this.wkid
